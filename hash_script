@@ -1,0 +1,10 @@
+set input_int $argv[1]
+
+# Hashing process
+set hash_output (echo -n $input_int | sha256sum | cut -d ' ' -f 1)
+
+# Save the result in hash_output.txt
+echo $hash_output > hash_output.txt
+
+echo "Hash is $hash_output."
+ 
